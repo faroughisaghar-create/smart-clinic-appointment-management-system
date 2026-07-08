@@ -35,7 +35,9 @@ Patient --> UC3
 Patient --> UC4
 Patient --> UC5
 
+
 Patient --> UC6
+
 
 Receptionist --> UC2
 Receptionist --> UC3
