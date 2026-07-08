@@ -11,8 +11,7 @@ This document contains the main diagrams for the Smart Clinic Appointment & Mana
 5. ER Diagram
 
 
-   
-## Use Case Diagram
+   ## Use Case Diagram
 ```mermaid
 flowchart LR
 Patient[Patient]
@@ -49,7 +48,9 @@ Doctor --> UC7
 Admin --> UC9
 Admin --> UC10
 
+## Class Diagram
 
-
-
+mermaid
+classDiagram
+`
 
