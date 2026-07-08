@@ -1,6 +1,6 @@
 
 ## Class Diagram
-mermaid
+```mermaid
 classDiagram
 class User {
 +int userId
@@ -68,10 +68,18 @@ Doctor "1" --> "0..*" MedicalRecord : updates
 `
 
 
+
+
+
+text
+
+
+text
 ## Class Diagram
 
 ## Commit message
 text
 Add class diagram
 
-اگر خواستی، بعد از اینکه این ذخیره شد، می‌رویم **Sequence Diagram**.
+
+
