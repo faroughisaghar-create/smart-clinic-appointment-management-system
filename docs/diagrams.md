@@ -1,9 +1,7 @@
 # Diagrams
 
-
 ## Sequence Diagram
 
-mermaid
 sequenceDiagram
 actor Patient
 participant System
@@ -29,18 +27,7 @@ Patient->>System: Choose appointment slot
 System->>Appointment: Create appointment
 Appointment-->>System: Appointment confirmed
 System-->>Patient: Show confirmation
-`
 
-mermaid
-
-sequenceDiagram
-actor Patient 
- mermaid
-markdown
-
-
-
-mermaid
 
 
 
