@@ -1,42 +1,77 @@
-# Diagrams
 
-## Use Case Diagram
-```mermaid
-flowchart LR
-Patient[Patient]
-Receptionist[Receptionist]
-Doctor[Doctor]
-Admin[System Admin]
+## Class Diagram
+mermaid
+classDiagram
+class User {
++int userId
++string fullName
++string email
++string password
++string phoneNumber
++login()
++logout()
+}
 
-UC1((Register Login))
-UC2((Search Clinics))
-UC3((View Doctors))
-UC4((Book Appointment))
-UC5((Cancel Appointment))
-UC6((View Medical Record))
-UC7((Manage Schedule))
-UC8((Confirm Appointment))
-UC9((Manage Users))
-UC10((Generate Reports))
+class Patient {
++bookAppointment()
++cancelAppointment()
++viewMedicalRecord()
+}
 
-Patient --> UC1
-Patient --> UC2
-Patient --> UC3
-Patient --> UC4
-Patient --> UC5
-Patient --> UC6
+class Receptionist {
++confirmAppointment()
++manageBooking()
+}
 
-Receptionist --> UC2
-Receptionist --> UC3
-Receptionist --> UC4
-Receptionist --> UC8
+class Doctor {
++string specialization
++manageSchedule()
++viewPatientRecord()
+}
 
-Doctor --> UC6
-Doctor --> UC7
+class Admin {
++manageUsers()
++generateReports()
+}
 
-Admin --> UC9
-Admin --> UC10
+class Clinic {
++int clinicId
++string clinicName
++string address
+}
+
+class Appointment {
++int appointmentId
++date appointmentDate
++string status
++createAppointment()
++cancelAppointment()
+}
+
+class MedicalRecord {
++int recordId
++string diagnosis
++string prescription
++viewRecord()
+}
+
+User <|-- Patient
+User <|-- Receptionist
+User <|-- Doctor
+User <|-- Admin
+
+Patient "1" --> "0..*" Appointment : books
+Doctor "1" --> "0..*" Appointment : handles
+Clinic "1" --> "0..*" Doctor : has
+Patient "1" --> "0..*" MedicalRecord : owns
+Doctor "1" --> "0..*" MedicalRecord : updates
+`
 
 
+## Class Diagram
 
+## Commit message
+text
+Add class diagram
 
+اگر خواستی، بعد از اینکه این ذخیره شد، می‌رویم **Sequence Diagram**.
