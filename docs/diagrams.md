@@ -6,7 +6,7 @@ Receptionist[Receptionist]
 Doctor[Doctor]
 Admin[System Admin]
 
-UC1((Register / Login))
+UC1((Register Login))
 UC2((Search Clinics))
 UC3((View Doctors))
 UC4((Book Appointment))
@@ -38,5 +38,27 @@ Admin --> UC10
 ## Class Diagram
 
 mermaid
+classDiagram
+class User {
++int userId
++string fullName
++string email
++string password
++string phoneNumber
++login()
++logout()
+}
+`
+
+
+
+`
+```markdown
+`
+
+
+`
+```markdown
+```mermaid
 classDiagram
 `
