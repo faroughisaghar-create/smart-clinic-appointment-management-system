@@ -36,11 +36,8 @@ Admin --> UC9
 Admin --> UC10
 `
 
----
+3: Cam
 
-## بخش 3: Class Diagram
-
-بعد از Use Case Diagram، یک خط خالی بزن و این را وارد کن:
 
 `
 ```markdown
