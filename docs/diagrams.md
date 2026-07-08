@@ -11,7 +11,6 @@ This document contains the main diagrams for the Smart Clinic Appointment & Mana
 5. ER Diagram
 
 ## Use Case Diagram
-```mermaid
 flowchart LR
 Patient[Patient]
 Receptionist[Receptionist]
