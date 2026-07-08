@@ -43,11 +43,17 @@ Receptionist --> UC3
 Receptionist --> UC4
 Receptionist --> UC8
 
+
+
 Doctor --> UC6
 Doctor --> UC7
 
+
+
 Admin --> UC9
 Admin --> UC10
+
+
 
 
 
