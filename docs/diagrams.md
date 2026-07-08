@@ -72,6 +72,21 @@ DOCTOR ||--o{ SCHEDULE : has
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 پmarkdown
 ## ER Diagram - Smart Clinic Appointment & Management System
 
