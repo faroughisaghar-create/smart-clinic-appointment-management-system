@@ -1,3 +1,5 @@
+# Diagrams
+
 ## Use Case Diagram
 ```mermaid
 flowchart LR
@@ -6,7 +8,7 @@ Receptionist[Receptionist]
 Doctor[Doctor]
 Admin[System Admin]
 
-UC1((Register Login))
+UC1((Register / Login))
 UC2((Search Clinics))
 UC3((View Doctors))
 UC4((Book Appointment))
@@ -34,31 +36,20 @@ Doctor --> UC7
 
 Admin --> UC9
 Admin --> UC10
-
-## Class Diagram
-
-mermaid
-classDiagram
-class User {
-+int userId
-+string fullName
-+string email
-+string password
-+string phoneNumber
-+login()
-+logout()
-}
 `
 
 
+```text
+Admin
 
-`
-```markdown
-`
+--> UC10
+
+```text
 
 
-`
-```markdown
-```mermaid
-classDiagram
-`
+
+
+```text
+Fix use case diagram
+
+اگر باز خطا داد، یعنی احتمالاً سه بک‌تیک آخر را درست نگذاشتی یا `## Class Diagram` هنوز چسبیده پایینش باقی مانده.
