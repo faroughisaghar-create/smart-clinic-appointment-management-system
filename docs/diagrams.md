@@ -11,6 +11,7 @@ This document contains the main diagrams for the Smart Clinic Appointment & Mana
 5. ER Diagram
 
 ## Use Case Diagram
+```mermaid
 flowchart LR
 Patient[Patient]
 Receptionist[Receptionist]
@@ -35,31 +36,16 @@ Patient --> UC4
 Patient --> UC5
 Patient --> UC6
 
-
-
 Receptionist --> UC2
 Receptionist --> UC3
 Receptionist --> UC4
 Receptionist --> UC8
 
-
-
 Doctor --> UC6
 Doctor --> UC7
 
-
-
 Admin --> UC9
 Admin --> UC10
-
-
-
-
-
-
-
-
-
 
 ## Class Diagram
 
@@ -126,7 +112,7 @@ class MedicalRecord {
 +string diagnosis
 +string prescription
 +string visitDate
-+updateRecord()
+ User <updateRecord()
 +viewRecord()
 }
 
@@ -141,31 +127,12 @@ Doctor "1" --> "many" Appointment
 Appointment "1" --> "1" MedicalRecord
 Patient "1" --> "many" MedicalRecord
 Doctor "1" --> "many" MedicalRecord
-
-
 `
 
-```markdown
-## Class Diagram
+بعد از Paste کردن:
 
-
-
-markdown
-Admin --> UC10## Class Diagram
-
-
-`markdown
-Admin --> UC10
-
-## Class Diagram
-`
-
+1. پایین صفحه روی **Commit changes** بزن.
+2. پیام Commit را بگذار:
 
 ```text
-Fix Mermaid diagrams formatting
-
-`
-
-
-```markdown
-Admin --> UC10
+Fix diagrams rendering
