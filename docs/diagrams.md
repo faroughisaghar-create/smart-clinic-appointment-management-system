@@ -38,8 +38,6 @@ Admin --> UC10
 
 
 
-3: Cam
-
 
 ```markdown
 ## Class Diagram
