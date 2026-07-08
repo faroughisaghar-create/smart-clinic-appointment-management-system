@@ -36,10 +36,11 @@ Doctor --> UC7
 
 Admin --> UC9
 Admin --> UC10
-`
 
 
-```text
+
+text
+
 Admin
 
 --> UC10
@@ -50,4 +51,3 @@ Admin
 
 Fix use case diagram
 
-اگر باز خطا داد، یعنی احتمالاً سه بک‌تیک آخر را درست نگذاشتی یا `## Class Diagram` هنوز چسبیده پایینش باقی مانده.
