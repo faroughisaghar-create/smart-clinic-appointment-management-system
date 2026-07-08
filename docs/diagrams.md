@@ -1,5 +1,4 @@
 
-
 ## Sequence Diagram
 mermaid
 sequenceDiagram
@@ -22,10 +21,9 @@ Patient->>System: Select appointment slot
 System->>Appointment: Create appointment
 Appointment-->>System: Appointment confirmed
 System-->>Patient: Show confirmation
-`
 
-## ترتیب درست
-باید این شکلی باشد:
+
+:
 
 1. Use Case Diagram
 2. Class Diagram
