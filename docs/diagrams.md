@@ -11,7 +11,7 @@ This document contains the main diagrams for the Smart Clinic Appointment & Mana
 5. ER Diagram
 
 
-   ## Use Case Diagram
+## Use Case Diagram
 ```mermaid
 flowchart LR
 Patient[Patient]
@@ -52,5 +52,94 @@ Admin --> UC10
 
 mermaid
 classDiagram
+class User {
++int userId
++string fullName
++string email
++string password
++string phoneNumber
++login()
++logout()
+}
+
+class Patient {
++int patientId
++string nationalCode
++string dateOfBirth
++viewMedicalRecord()
++bookAppointment()
++cancelAppointment()
+}
+
+class Doctor {
++int doctorId
++string specialty
++string medicalLicenseNumber
++manageSchedule()
++viewAppointments()
+}
+
+class Receptionist {
++int receptionistId
++confirmAppointment()
++manageAppointments()
+}
+
+class SystemAdmin {
++int adminId
++manageUsers()
++generateReports()
+}
+
+class Clinic {
++int clinicId
++string clinicName
++string address
++string phoneNumber
+}
+
+class Appointment {
++int appointmentId
++string appointmentDate
++string appointmentTime
++string status
++createAppointment()
++cancelAppointment()
++confirmAppointment()
+}
+
+class MedicalRecord {
++int recordId
++string diagnosis
++string prescription
++string visitDate
++updateRecord()
++viewRecord()
+}
+
+User <|-- Patient
+User <|-- Doctor
+User <|-- Receptionist
+User <|-- SystemAdmin
+
+Clinic "1" --> "many" Doctor
+Patient "1" --> "many" Appointment
+Doctor "1" --> "many" Appointment
+Appointment "1" --> "1" MedicalRecord
+Patient "1" --> "many" MedicalRecord
+Doctor "1" --> "many" MedicalRecord
+`
+
+
+`
+```markdown
+    Admin --> UC10
+
+## Class Diagram
+
+mermaid
+classDiagram
+`
+
 `
 
