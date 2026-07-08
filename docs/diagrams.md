@@ -23,13 +23,7 @@ Appointment-->>System: Appointment confirmed
 System-->>Patient: Show confirmation
 
 
-:
 
-1. Use Case Diagram
-2. Class Diagram
-3. Sequence Diagram
-
-## Commit message
 text
 Add sequence diagram
 
