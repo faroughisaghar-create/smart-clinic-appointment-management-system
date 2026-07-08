@@ -1,92 +1,171 @@
-## ER Diagram - Smart Clinic Appointment & Management System
+## 5. ER Diagram - Smart Clinic Appointment and Management System
 
-The following ER diagram shows the main database entities and their relationships in the Smart Clinic Appointment and Management System.
+This ER diagram represents the main database entities and relationships of the Smart Clinic Appointment and Management System.
 ```mermaid
 erDiagram
 
-USER {
+USERS {
 int user_id PK
 string full_name
 string email
-string password
+string password_hash
+string phone_number
 string role
-string phone
+datetime created_at
 }
 
-PATIENT {
+PATIENTS {
 int patient_id PK
 int user_id FK
-string national_id
-date birth_date
+string national_code
+date date_of_birth
 string gender
+string address
 }
 
-DOCTOR {
+DOCTORS {
 int doctor_id PK
 int user_id FK
-string specialization
 int clinic_id FK
+string specialization
+string medical_license_number
+int experience_years
 }
 
-CLINIC {
-int clinic_id PK
-string name
-string address
-string phone
-}
-
-APPOINTMENT {
-int appointment_id PK
-int patient_id FK
-int doctor_id FK
-date appointment_date
-string appointment_time
-string status
-}
-
-SCHEDULE {
-int schedule_id PK
-int doctor_id FK
-string available_day
-string start_time
-string end_time
-}
-
-ADMIN {
+ADMINS {
 int admin_id PK
 int user_id FK
 string access_level
 }
 
-USER ||--|| PATIENT : has
-USER ||--|| DOCTOR : has
-USER ||--|| ADMIN : has
+CLINICS {
+int clinic_id PK
+string clinic_name
+string address
+string phone_number
+string email
+}
 
-CLINIC ||--o{ DOCTOR : employs
+SCHEDULES {
+int schedule_id PK
+int doctor_id FK
+string day_of_week
+time start_time
+time end_time
+int visit_duration
+boolean is_available
+}
 
-PATIENT ||--o{ APPOINTMENT : books
-DOCTOR ||--o{ APPOINTMENT : receives
+APPOINTMENTS {
+int appointment_id PK
+int patient_id FK
+int doctor_id FK
+int schedule_id FK
+date appointment_date
+time appointment_time
+string status
+datetime created_at
+}
 
-DOCTOR ||--o{ SCHEDULE : has
+USERS ||--|| PATIENTS : has
+USERS ||--|| DOCTORS : has
+USERS ||--|| ADMINS : has
+
+CLINICS ||--o{ DOCTORS : includes
+
+DOCTORS ||--o{ SCHEDULES : defines
+
+PATIENTS ||--o{ APPOINTMENTS : books
+DOCTORS ||--o{ APPOINTMENTS : receives
+SCHEDULES ||--o{ APPOINTMENTS : used_for
 
 
 
 
 
 
+markdown
+
+mermaid
 
 
 
+Mermaid 
 
+mermaid
+erDiagram
 
+    USERS {
+        int user_id PK
+        string full_name
+        string email
+        string password_hash
+        string phone_number
+        string role
+        datetime created_at
+    }
 
+    PATIENTS {
+        int patient_id PK
+        int user_id FK
+        string national_code
+        date date_of_birth
+        string gender
+        string address
+    }
 
+    DOCTORS {
+        int doctor_id PK
+        int user_id FK
+        int clinic_id FK
+        string specialization
+        string medical_license_number
+        int experience_years
+    }
 
+    ADMINS {
+        int admin_id PK
+        int user_id FK
+        string access_level
+    }
 
+    CLINICS {
+        int clinic_id PK
+        string clinic_name
+        string address
+        string phone_number
+        string email
+    }
 
+    SCHEDULES {
+        int schedule_id PK
+        int doctor_id FK
+        string day_of_week
+        time start_time
+        time end_time
+        int visit_duration
+        boolean is_available
+    }
 
+    APPOINTMENTS {
+        int appointment_id PK
+        int patient_id FK
+        int doctor_id FK
+        int schedule_id FK
+        date appointment_date
+        time appointment_time
+        string status
+        datetime created_at
+    }
 
+    USERS ||--|| PATIENTS : has
+    USERS ||--|| DOCTORS : has
+    USERS ||--|| ADMINS : has
 
-## ER Diagram - Smart Clinic Appointment & Management System
+    CLINICS ||--o{ DOCTORS : includes
+    DOCTORS ||--o{ SCHEDULES : defines
 
-![ER Diagram](../images/er-diagram.png)
+    PATIENTS ||--o{ APPOINTMENTS : books
+    DOCTORS ||--o{ APPOINTMENTS : receives
+    SCHEDULES ||--o{ APPOINTMENTS : used_for
+
