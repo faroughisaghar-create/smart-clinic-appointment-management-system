@@ -34,12 +34,11 @@ Doctor --> UC7
 
 Admin --> UC9
 Admin --> UC10
-`
+
 
 3: Cam
 
 
-`
 ```markdown
 ## Class Diagram
 ```mermaid
