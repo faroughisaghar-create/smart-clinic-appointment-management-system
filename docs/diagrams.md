@@ -1,3 +1,4 @@
+mermaid
 sequenceDiagram
     actor Patient
     participant System
@@ -9,25 +10,15 @@ sequenceDiagram
 
     Patient->>System: Search Clinics
     System->>Clinic: Get clinic list
-    Clinic-->>System: Return clinic details
+    Clinic-->>System: Clinic details
 
     Patient->>System: View Doctors
     System->>Doctor: Get doctor list
-    Doctor-->>System: Return doctor details
+    Doctor-->>System: Doctor details
 
     Patient->>System: Select appointment slot
     System->>Appointment: Create appointment
     Appointment-->>System: Appointment confirmed
-
     System-->>Patient: Show confirmation
-
-
-
-
-
-
-
-
-
 
 
