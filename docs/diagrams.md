@@ -39,7 +39,6 @@ Admin --> UC10
 
 
 
-markdown
 ## Class Diagram
 ```mermaid
 classDiagram
