@@ -23,7 +23,6 @@ Appointment-->>System: Appointment confirmed
 System-->>Patient: Show confirmation
 
 
-
 text
 Add sequence diagram
 
