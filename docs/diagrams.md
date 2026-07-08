@@ -7,18 +7,20 @@ sequenceDiagram
     participant Appointment
 
     Patient->>System: Login / Register
+    System-->>Patient: Login Successful
 
     Patient->>System: Search Clinics
-    System->>Clinic: Get clinic list
-    Clinic-->>System: Clinic details
+    System->>Clinic: Request clinic list
+    Clinic-->>System: Return clinic list
+    System-->>Patient: Display clinics
 
-    Patient->>System: View Doctors
-    System->>Doctor: Get doctor list
-    Doctor-->>System: Doctor details
+    Patient->>System: Select Clinic
+    System->>Doctor: Request doctors
+    Doctor-->>System: Return doctor list
+    System-->>Patient: Display doctors
 
-    Patient->>System: Select appointment slot
+    Patient->>System: Select Doctor
+    Patient->>System: Choose appointment slot
     System->>Appointment: Create appointment
     Appointment-->>System: Appointment confirmed
     System-->>Patient: Show confirmation
-
-
