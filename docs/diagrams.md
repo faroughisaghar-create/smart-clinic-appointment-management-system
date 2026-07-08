@@ -10,7 +10,6 @@ This document contains the main diagrams for the Smart Clinic Appointment & Mana
 4. Activity Diagram
 5. ER Diagram
 
-
 ## Use Case Diagram
 ```mermaid
 flowchart LR
@@ -128,18 +127,31 @@ Doctor "1" --> "many" Appointment
 Appointment "1" --> "1" MedicalRecord
 Patient "1" --> "many" MedicalRecord
 Doctor "1" --> "many" MedicalRecord
-`
 
 
 `
+
 ```markdown
-    Admin --> UC10
-
 ## Class Diagram
 
-mermaid
-classDiagram
+
+
+markdown
+Admin --> UC10## Class Diagram
+
+
+`markdown
+Admin --> UC10
+
+## Class Diagram
 `
+
+
+```text
+Fix Mermaid diagrams formatting
 
 `
 
+
+```markdown
+Admin --> UC10
